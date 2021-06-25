@@ -1,0 +1,18 @@
+.hero {
+    height: 132px;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  
+  .hero::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    content: "";
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
