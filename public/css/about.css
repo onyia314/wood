@@ -1,5 +1,5 @@
 .hero {
-    height: 132px;
+    height: 50vh;
     width: 100%;
     background-size: cover;
     background-position: center center;
@@ -14,5 +14,14 @@
     width: 100%;
     content: "";
     background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .hero-inner-cont {
+    position: absolute;
+    text-align: center;
+    left: 33%;
+    bottom: 0;
+    height: 33%;
+    width: 34%;
   }
   

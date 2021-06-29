@@ -19,6 +19,11 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- general plugin-->
+
+    <link rel="stylesheet" href="/vendor/plugins/aos/aos.css">
+    <link rel="stylesheet" href="/vendor/plugins/carousel/owl.carousel.min.css">
     
     <!-- Style -->
     <link rel="stylesheet" href="/css/style.css">
@@ -46,22 +51,23 @@
           <div class="row align-items-center">
             <div class="col-6">
               <div class="d-flex mr-auto">
-                <a href="#" class="d-flex align-items-center mr-4">
+                <a href="mailto:marinaweinstein@yahoo.com" class="d-flex align-items-center mr-4">
                   <span class="icon-envelope mr-2"></span>
-                  <span class="d-none d-md-inline-block">info@domain.com</span>
+                  <span class="d-none d-md-inline-block">marinaweinstein@yahoo.com</span>
                 </a>
-                <a href="#" class="d-flex align-items-center mr-auto">
+                <a href="tel: +1 215-990-4058" class="d-flex align-items-center mr-auto">
                   <span class="icon-phone mr-2"></span>
-                  <span class="d-none d-md-inline-block">+1 234 4567 8910</span>
+                  <span class="d-none d-md-inline-block">+1 215-990-4058</span>
                 </a>
               </div>
             </div>
             <div class="col-6 text-right">
               <div class="mr-auto">
-                <a href="#" class="p-2 pl-0"><span class="icon-twitter"></span></a>
-                <a href="#" class="p-2 pl-0"><span class="icon-facebook"></span></a>
-                <a href="#" class="p-2 pl-0"><span class="icon-linkedin"></span></a>
-                <a href="#" class="p-2 pl-0"><span class="icon-instagram"></span></a>
+                <a href="https://facebook.com/MarinasRestoration/" target="_blank" class="p-2 pl-0"><span class="icon-facebook"></span></a>
+                <a href="https://instagram.com/marina_woodrestoration?utm_medium=copy_link" target="_blank" class="p-2 pl-0"><span class="icon-instagram"></span></a>
+
+               {{--  <a href="#" class="p-2 pl-0"><span class="icon-linkedin"></span></a>
+                <a href="#" class="p-2 pl-0"><span class="icon-twitter"></span></a> --}}
               </div>
               
             </div>
@@ -82,7 +88,6 @@
 
                   <ul class="site-menu main-menu js-clone-nav d-none d-lg-block">
                     <li class="active"><a href="{{route('index')}}" class="nav-link">Home</a></li>
-                    <li><a href="#classes-section" class="nav-link">Classes</a></li>
                     <li class="has-children">
                       <a href="#" class="nav-link">Pages</a>
                       <ul class="dropdown arrow-top">
@@ -100,8 +105,7 @@
                       </ul>
                     </li>
                     <li><a href="{{route('about')}}" class="nav-link">About</a></li>
-                    <li><a href="#events-section" class="nav-link">Events</a></li>
-                    <li><a href="#gallery-section" class="nav-link">Gallery</a></li>
+                    <li><a href="{{route('gallery')}}" class="nav-link">Gallery</a></li>
                     <li><a href="#contact-section" class="nav-link">Contact</a></li>
                   </ul>
                 </div>
@@ -136,11 +140,11 @@
             <div class="social mb-4">
               <h3>Stay in touch</h3>
               <ul class="list-unstyled">
-                <li class="in"><a href="#"><span class="icon-instagram"></span></a></li>
-                <li class="fb"><a href="#"><span class="icon-facebook"></span></a></li>
-                <li class="tw"><a href="#"><span class="icon-twitter"></span></a></li>
+                <li class="in"><a href="https://instagram.com/marina_woodrestoration?utm_medium=copy_link" target="_blank"><span class="icon-instagram"></span></a></li>
+                <li class="fb"><a href="https://facebook.com/MarinasRestoration/"><span class="icon-facebook" target="_blank"></span></a></li>
+                {{-- <li class="tw"><a href="#"><span class="icon-twitter"></span></a></li>
                 <li class="pin"><a href="#"><span class="icon-pinterest"></span></a></li>
-                <li class="dr"><a href="#"><span class="icon-dribbble"></span></a></li>
+                <li class="dr"><a href="#"><span class="icon-dribbble"></span></a></li> --}}
               </ul>
             </div>
 
@@ -155,9 +159,13 @@
     </footer>
   
     <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/vendor/plugins/aos/aos.js"></script>
     <script src="/js/popper.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
+    <script src="/vendor/plugins/carousel/owl.carousel.min.js"></script>
     <script src="/js/jquery.sticky.js"></script>
     <script src="/js/main.js"></script>
+    @stack('ui-script')
+
   </body>
 </html>

@@ -10,6 +10,10 @@
 
     <div class = "hero" style="background-image: url('/images/hero_2.jpg')">
 
+        <div class="hero-inner-cont">
+            <h1 style="font-weight: bold; color:white">ABOUT US</h1>
+        </div>
+
     </div>
     
 @endsection
