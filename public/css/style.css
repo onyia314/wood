@@ -522,3 +522,56 @@ a:hover {
   color: #8a6f6f;
 }
 
+.contactForm .label {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600; }
+
+.contactForm .form-control {
+  border: none; }
+
+.contactForm .btn {
+  width: 100%;
+  display: block; }
+
+#contactForm .error {
+  color: #f65c78;
+  font-size: 12px; }
+
+#contactForm .form-control {
+  font-size: 16px; }
+
+#message {
+  resize: vertical; }
+
+#form-message-warning, #form-message-success {
+  display: none; }
+
+#form-message-warning {
+  color: red; }
+
+#form-message-success {
+  color: #28a745;
+  font-size: 20px;
+  font-weight: 700; }
+
+.submitting {
+  float: left;
+  width: 100%;
+  padding: 10px 0;
+  display: none;
+  font-size: 16px;
+  font-weight: 500; 
+}
+
+.dbox .icon{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #bc9864;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+

@@ -1,6 +1,97 @@
 $(function() {
-	//initialise aos
-	AOS.init();
+
+//initialise aos
+AOS.init();
+
+/**
+ *  validate
+ */
+
+// Form
+var contactForm = function() {
+	if ($('#contactForm').length > 0 ) {
+		$( "#contactForm" ).validate( {
+			rules: {
+				name: "required",
+				subject: "required",
+				email: {
+					required: true,
+					email: true
+				},
+				message: {
+					required: true,
+					minlength: 5
+				}
+			},
+			messages: {
+				name: "Please enter your name",
+				subject: "Please enter your subject",
+				email: "Please enter a valid email address",
+				message: "Please enter a message"
+			},
+			/* submit via ajax */
+			
+			submitHandler: function(form) {		
+				var $submit = $('.submitting'),
+					$contactForm = "http://127.0.0.1:8000/contact" + '/' + $('#name').val() + '/' +  $('#email').val() + '/' + $('#subject').val() + '/' + $('#message').val(),
+					waitText = 'Submitting...';
+				alert($contactForm)
+
+				$.ajax({   	
+				  type: "GET",
+				  url: $contactForm,
+				  data: $(form).serialize(),
+
+				  beforeSend: function() { 
+					  $submit.css('display', 'block').text(waitText);
+				  },
+
+				  success: function(data) {
+
+					console.log(data);
+
+				   if (data.message == 'OK') {
+					   $('#form-message-warning').hide();
+						setTimeout(function(){
+						   $('#contactForm').fadeOut();
+					   }, 1000);
+						setTimeout(function(){
+						   $('#form-message-success').fadeIn();   
+					   }, 1400);
+
+					   // setTimeout(function(){
+						  //  $('#form-message-success').fadeOut();   
+					   // }, 8000);
+
+					   setTimeout(function(){
+						   $submit.css('display', 'none').text(waitText);  
+					   }, 1400);
+
+			 //       	setTimeout(function(){
+			 //       		$( '#contactForm' ).each(function(){
+										//     this.reset();
+										// });
+			 //       	}, 1400);
+					   
+					} else {
+					   $('#form-message-warning').html(data.message);
+						$('#form-message-warning').fadeIn();
+						$submit.css('display', 'none');
+					} 
+					
+				  },
+				  error: function(data) {
+					  $('#form-message-warning').html("Something went wrong. Please try again.");
+					 $('#form-message-warning').fadeIn();
+					 $submit.css('display', 'none');
+				  }
+			  });    		
+			  } // end submitHandler
+
+		});
+	}
+};
+contactForm();
 
 
 /**

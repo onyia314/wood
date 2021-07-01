@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SendContactUsEmail;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +26,7 @@ Route::get('/gallery', function () {
     return view('gallery');
 })->name('gallery');
 
+Route::group(['middleware' => ['json.response']] , function(){
+//no need for @csrf here so we make use of Get method
+Route::get('/contact/{name}/{email}/{subject}/{message}' , [SendContactUsEmail::class , 'send']);
+});

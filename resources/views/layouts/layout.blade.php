@@ -13,6 +13,8 @@
 
     <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link rel="stylesheet" href="/fonts/icomoon/style.css">
 
     <link rel="stylesheet" href="/css/owl.carousel.min.css">
@@ -105,6 +107,8 @@
                       </ul>
                     </li>
                     <li><a href="{{route('about')}}" class="nav-link">About</a></li>
+                    <li><a href="{{route('about')}}" class="nav-link">Services</a></li>
+                    <li><a href="{{route('about')}}" class="nav-link">Blog</a></li>
                     <li><a href="{{route('gallery')}}" class="nav-link">Gallery</a></li>
                     <li><a href="#contact-section" class="nav-link">Contact</a></li>
                   </ul>
@@ -164,6 +168,7 @@
     <script src="/js/bootstrap.min.js"></script>
     <script src="/vendor/plugins/carousel/owl.carousel.min.js"></script>
     <script src="/js/jquery.sticky.js"></script>
+    <script src="/vendor/plugins/validate/jquery.validate.min.js"></script>
     <script src="/js/main.js"></script>
     @stack('ui-script')
 
