@@ -27,8 +27,8 @@
     </div>
     <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8" >
       <div class="twentytwenty-container">
-        <img src="/images/before_1.jpg" alt="before"/>
-        <img src="/images/after_1.jpg"  alt="after"/>
+        <img src="/images/before_1.jpg" alt="before" width="450" height="500"/>
+        <img src="/images/after_1.jpg"  alt="after"  width="450" height="500"/>
       </div>
     </div>
 </div>

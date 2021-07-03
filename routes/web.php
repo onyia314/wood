@@ -30,3 +30,9 @@ Route::group(['middleware' => ['json.response']] , function(){
 //no need for @csrf here so we make use of Get method
 Route::get('/contact/{name}/{email}/{subject}/{message}' , [SendContactUsEmail::class , 'send']);
 });
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth' , 'verified'])->name('dashboard');
+
+require __DIR__.'/auth.php';
