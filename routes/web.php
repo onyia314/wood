@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\SendContactUsEmail;
 
 /*
@@ -25,6 +26,8 @@ Route::get('/about', function () {
 Route::get('/gallery', function () {
     return view('gallery');
 })->name('gallery');
+
+Route::resource('projects' , ProjectController::class);
 
 Route::group(['middleware' => ['json.response']] , function(){
 //no need for @csrf here so we make use of Get method

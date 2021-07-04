@@ -10,6 +10,9 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="/css/bootstrap.min.css">
 		<link rel="stylesheet" href="/css/dashboard/dashboard.css">
+
+    @stack('css')
+
   </head>
   <body>
 		
@@ -19,42 +22,48 @@
 		  		<a href="#" class="img logo rounded-circle mb-5" style="background-image: url(/images/logo.jpg);"></a>
 	        <ul class="list-unstyled components mb-5">
 	          <li class="active">
-	            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+	            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
 	            <ul class="collapse list-unstyled" id="homeSubmenu">
                 <li>
-                    <a href="#">Home 1</a>
+                    <a href="{{route('index')}}">Home</a>
                 </li>
                 <li>
-                    <a href="#">Home 2</a>
+                    <a href="{{route('gallery')}}">Gallery</a>
                 </li>
                 <li>
-                    <a href="#">Home 3</a>
+                    <a href="{{route('about')}}">About</a>
                 </li>
 	            </ul>
 	          </li>
+	          
 	          <li>
-	              <a href="#">About</a>
-	          </li>
-	          <li>
-              <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+              <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Projets</a>
               <ul class="collapse list-unstyled" id="pageSubmenu">
                 <li>
-                    <a href="#">Page 1</a>
+                    <a href="{{route('projects.create')}}">Add project</a>
                 </li>
                 <li>
-                    <a href="#">Page 2</a>
-                </li>
-                <li>
-                    <a href="#">Page 3</a>
+                    <a href="{{route('projects.index')}}">view projects</a>
                 </li>
               </ul>
 	          </li>
+
 	          <li>
+              <a href="#settingsSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Settings</a>
+              <ul class="collapse list-unstyled" id="settingsSubmenu">
+                <li>
+                    <a href="">change password</a>
+                </li>
+              </ul>
+	          </li>
+
+	          {{-- <li>
               <a href="#">Portfolio</a>
 	          </li>
 	          <li>
               <a href="#">Contact</a>
-	          </li>
+	          </li> --}}
+
 	        </ul>
 
 	        <div class="footer">
@@ -92,19 +101,22 @@
                     <a class="nav-link" href="#">Portfolio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                  <form method="POST" action="{{route('logout')}}">
+                    @csrf
+                    <button class = "btn btn-danger" type="submit">logout</button>
+                  </form>
                 </li>
               </ul>
             </div>
           </div>
         </nav>
-
+  
         @yield('content')
         
       </div>
 		</div>
 
-    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="/js/jquery-3.3.1.min.js"></script>
     <script src="/js/popper.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/admin/dashboard.js"></script>
