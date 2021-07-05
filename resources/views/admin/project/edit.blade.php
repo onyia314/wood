@@ -7,7 +7,9 @@
         <div class="alert alert-success card-header text-center">{{session('status')}}</div>
         @endif
 
-        <div class="card-header text-center">{{$project->id}}</div>
+        <div class="card-header text-center alert-secondary"> PLEASE NOTE THAT SINCE YOUR ARE TRYING TO UPDATE YOU CAN CHOOSE TO EDIT ANY OR NONE OF BEFORE OR AFTER IMAGE <br>
+            YOU ARE NOT NECCESSARY REQUIRED TO UPLOAD BOTH OR ANY OF THE IMAGES SINCE YOU ARE UPDATING 
+        </div>
 
         <div class="card-body">
 
@@ -19,7 +21,7 @@
         
                 <div class="form-group row">
 
-                    <label for="before" class="col-md-4 col-form-label text-md-right">before:</label>
+                    <label for="before" class="col-md-4 col-form-label text-md-right">before:<strong>(optional)</strong></label>
 
                     <div class="col-md-6">
                         <input type="file" name="before" id="before">
@@ -34,7 +36,7 @@
 
                 <div class="form-group row">
 
-                    <label for="after" class="col-md-4 col-form-label text-md-right">after:</label>
+                    <label for="after" class="col-md-4 col-form-label text-md-right">after:<strong>(optional)</strong></label>
 
                     <div class="col-md-6">
                         <input type="file" name="after" id="after">

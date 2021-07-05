@@ -105,8 +105,7 @@ class ProjectController extends Controller
         ]);
 
         $prevBeforePath = $project->before_path;
-        $prevAfterPath = $project->after_path;
-
+        $prevAfterPath = $project->after_path; 
 
         if($request->hasFile('before')){
             $project->before_path = $request->file('before')->store('projects' , 'wood_uploads');
@@ -121,10 +120,15 @@ class ProjectController extends Controller
         $project->about = $request->about;
 
         $project->save();
-        
-        //delete previous uploaded images after updating
-        Storage::disk('wood_uploads')->delete($prevBeforePath);
-        Storage::disk('wood_uploads')->delete($prevAfterPath);
+
+
+        if($project->wasChanged('before_path')){
+            Storage::disk('wood_uploads')->delete($prevBeforePath);
+        }
+
+        if($project->wasChanged('after_path')){
+            Storage::disk('wood_uploads')->delete($prevAfterPath);
+        }
 
         return redirect()->route('projects.edit' , ['project' => $project->id])->with('status' , 'project updated');
 
