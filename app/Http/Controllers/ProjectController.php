@@ -129,6 +129,10 @@ class ProjectController extends Controller
         if($project->wasChanged('after_path')){
             Storage::disk('wood_uploads')->delete($prevAfterPath);
         }
+        
+        if(!$project->wasChanged()){
+            return redirect()->route('projects.edit' , ['project' => $project->id])->with('noUpdate' , 'you changed nothing');
+        }
 
         return redirect()->route('projects.edit' , ['project' => $project->id])->with('status' , 'project updated');
 

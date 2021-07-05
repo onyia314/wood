@@ -6,6 +6,9 @@
         @if (session('status'))
         <div class="alert alert-success card-header text-center">{{session('status')}}</div>
         @endif
+        @if (session('noUpdate'))
+        <div class="alert alert-danger card-header text-center">{{session('noUpdate')}}</div>
+        @endif
 
         <div class="card-header text-center alert-secondary"> PLEASE NOTE THAT SINCE YOUR ARE TRYING TO UPDATE YOU CAN CHOOSE TO EDIT ANY OR NONE OF BEFORE OR AFTER IMAGE <br>
             YOU ARE NOT NECCESSARY REQUIRED TO UPLOAD BOTH OR ANY OF THE IMAGES SINCE YOU ARE UPDATING 
