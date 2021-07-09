@@ -35,8 +35,9 @@
                 </li>
 	            </ul>
 	          </li>
-	          
-	          <li>
+
+            @auth
+            <li>
               <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Projets</a>
               <ul class="collapse list-unstyled" id="pageSubmenu">
                 <li>
@@ -48,8 +49,7 @@
               </ul>
 	          </li>
 
-
-	          <li>
+            <li>
               <a href="#settingsSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Settings</a>
               <ul class="collapse list-unstyled" id="settingsSubmenu">
                 <li>
@@ -57,6 +57,15 @@
                 </li>
               </ul>
 	          </li>
+
+            @endauth
+
+            @if(Auth::user()->role == 'master')
+            <li>
+              <a href="{{route('users.index')}}">edit users</a>
+	          </li>
+            @endif
+	          
 
 	          {{-- <li>
               <a href="#">Portfolio</a>

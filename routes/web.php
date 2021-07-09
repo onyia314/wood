@@ -2,6 +2,7 @@
 
 use App\Models\Project;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UsersController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\SendContactUsEmail;
 
@@ -29,6 +30,12 @@ Route::get('/gallery', function () {
     return view('gallery' , ['projects' => $projects]);
 })->name('gallery');
 
+Route::middleware(['master'])->group(function(){
+    Route::get('/users' , [UsersController::class , 'index'])->name('users.index');
+    Route::post('/updateUserRole/{user}' , [UsersController::class , 'updateUserRole'])->name('users.updateRole');
+    Route::post('/users/{user}' , [UsersController::class , 'destroy'])->name('users.destroy');
+});
+
 Route::resource('projects' , ProjectController::class);
 
 Route::group(['middleware' => ['json.response']] , function(){
@@ -38,6 +45,6 @@ Route::get('/contact/{name}/{email}/{subject}/{message}' , [SendContactUsEmail::
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware(['auth' , 'verified'])->name('dashboard');
+})->middleware(['auth' , 'admin.master' , 'verified'])->name('dashboard');
 
 require __DIR__.'/auth.php';

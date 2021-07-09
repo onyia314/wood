@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers\Auth;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Password;
 
 class PasswordResetLinkController extends Controller
@@ -16,11 +15,7 @@ class PasswordResetLinkController extends Controller
      */
     public function create()
     {
-        if(Auth::check()){
-            return view('auth.forgot-password');
-        }
-
-        return view('guest.forgot-password');
+        return view('auth.forgot-password');
     }
 
     /**
