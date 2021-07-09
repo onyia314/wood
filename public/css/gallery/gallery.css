@@ -25,3 +25,36 @@
   width: 34%;
 }
 
+.gallery-container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .gallery-container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .gallery-container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .gallery-container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .gallery-container {
+    max-width: 960px;
+  }
+}
+
+

@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Project;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\SendContactUsEmail;
@@ -24,7 +25,8 @@ Route::get('/about', function () {
 })->name('about');
 
 Route::get('/gallery', function () {
-    return view('gallery');
+    $projects = Project::paginate(2);
+    return view('gallery' , ['projects' => $projects]);
 })->name('gallery');
 
 Route::resource('projects' , ProjectController::class);

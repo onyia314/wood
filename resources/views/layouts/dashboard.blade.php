@@ -48,11 +48,12 @@
               </ul>
 	          </li>
 
+
 	          <li>
               <a href="#settingsSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Settings</a>
               <ul class="collapse list-unstyled" id="settingsSubmenu">
                 <li>
-                    <a href="">change password</a>
+                    <a href="{{route('password.request')}}">reset password</a>
                 </li>
               </ul>
 	          </li>

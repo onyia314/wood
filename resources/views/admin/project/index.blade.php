@@ -41,7 +41,7 @@
                     <td>{{$project->client}}</td>
                     <td>
                     {{$project->title}}
-                    <small class="d-block">Far far away, behind the word mountains</small>
+                    <small class="d-block">{{Str::substr($project->about , 0 , 30)}}</small>
                     </td>
                     <td><a href="{{route('projects.edit' , ['project' => $project->id])}}" class="btn btn-success">edit</a></td>
                     <td>

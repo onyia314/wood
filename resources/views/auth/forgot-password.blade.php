@@ -1,36 +1,43 @@
-<x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
+@extends('layouts.dashboard')
+  
+@section('content')
 
-        <div class="mb-4 text-sm text-gray-600">
-            {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
-        </div>
-
-        <!-- Session Status -->
-        <x-auth-session-status class="mb-4" :status="session('status')" />
-
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
-
-        <form method="POST" action="{{ route('password.email') }}">
-            @csrf
-
-            <!-- Email Address -->
-            <div>
-                <x-label for="email" :value="__('Email')" />
-
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
-            </div>
-
-            <div class="flex items-center justify-end mt-4">
-                <x-button>
-                    {{ __('Email Password Reset Link') }}
-                </x-button>
-            </div>
-        </form>
-    </x-auth-card>
-</x-guest-layout>
+<main class="login-form">
+  <div class="cotainer">
+      <div class="row justify-content-center">
+          <div class="col-md-8">
+              <div class="card">
+                  <div class="card-header">Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.</div>
+                  <div class="card-body">
+  
+                    @if (session('status'))
+                    <div class="card-header alert alert-success text-center">
+                        {{session('status')}}
+                    </div>
+                    @endif
+  
+                      <form action="{{ route('password.email') }}" method="POST">
+                          @csrf
+                          <div class="form-group row">
+                              <label for="email_address" class="col-md-4 col-form-label text-md-right">E-Mail Address</label>
+                              <div class="col-md-6">
+                                  <input type="text" id="email_address" class="form-control" name="email" required autofocus>
+                                  @if ($errors->has('email'))
+                                      <span class="text-danger">{{ $errors->first('email') }}</span>
+                                  @endif
+                              </div>
+                          </div>
+                          <div class="col-md-6 offset-md-4">
+                              <button type="submit" class="btn btn-primary">
+                                  Email Password Reset Link
+                              </button>
+                          </div>
+                      </form>
+                        
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</main>
+@endsection 

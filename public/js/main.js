@@ -35,7 +35,6 @@ var contactForm = function() {
 				var $submit = $('.submitting'),
 					$contactForm = "http://127.0.0.1:8000/contact" + '/' + $('#name').val() + '/' +  $('#email').val() + '/' + $('#subject').val() + '/' + $('#message').val(),
 					waitText = 'Submitting...';
-				alert($contactForm)
 
 				$.ajax({   	
 				  type: "GET",

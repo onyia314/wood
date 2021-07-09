@@ -3,9 +3,23 @@
 @section('content')
 
     <div class="card">
+
+        <div class="alert alert-primary text-center">
+            <div>For a better aesthetics of the gallery please upload</div>
+            <ul>
+                <li>a landscape image( an Image which it's width is more than the height ) or a square image( an Image which it's width equal to the height )
+                </li>
+                <li>
+                    make sure that each before and after picture are of the same dimension
+                </li>
+                <li>let the dimesions of each image be the same for all instances</li>
+            </ul>
+        </div>
+
         @if (session('status'))
         <div class="alert alert-success card-header text-center">{{session('status')}}</div>
         @endif
+
         <div class="card-body">
             <form method="post" action="{{route('projects.store')}}" enctype="multipart/form-data">
 

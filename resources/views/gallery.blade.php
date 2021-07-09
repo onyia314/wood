@@ -8,17 +8,15 @@
 
 @section('curtain')
     <div class = "hero" style="background-image: url('/images/hero_2.jpg')">
-
         <div class="hero-inner-cont">
-            <h1 style="font-weight: bold; color:white">ABOUT US</h1>
+            <h3 style="font-weight: bold; color:white">Gallery</h3>
         </div>
-
     </div>
 @endsection
 
 @section('content')
 
-<div class="container">
+{{-- <div class="container">
   <div class="row">
 
     <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
@@ -32,6 +30,51 @@
       </div>
     </div>
 </div>
+</div> --}}
+
+<div class="gallery-container">
+  <div class="row">
+
+    @foreach ($projects as $project)
+
+      <div class="col-lg-6">
+        <div class="card">
+
+          <div class="twentytwenty-container">
+            <img src="{{asset('uploads') . '/' .$project->before_path}}" alt="before" style="width:100% !important height:auto !important "/>
+            <img src="{{asset('uploads') . '/' .$project->after_path}}" alt="after"  style="width:100% !important height:auto !important "/>
+          </div>
+
+          <div class="card-body">
+            <h5 class="card-title">{{$project->title}}</h5>
+            <p class="card-text">{{Str::words($project->about , 40  , '......' )}}</p>
+            <a href="#" class="btn btn-primary">Read more</a>
+          </div>
+        </div>
+      </div>    
+
+    @endforeach
+    
+
+    {{-- <div class="col-lg-6">
+      <div class="card">
+
+        <div class="twentytwenty-container">
+          <img src="/images/before_1.jpg" alt="before" style="width:100% !important height:auto !important "/>
+          <img src="/images/after_1.jpg"  alt="after" style="width:100% !important height:auto !important "/>
+        </div>
+
+        <div class="card-body">
+          <h5 class="card-title">Special title treatment</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div> --}}
+
+  </div>
+
+  <div class="mt-3">{{$projects->links()}}</div>
 </div>
 
 @endsection
