@@ -45,6 +45,6 @@ Route::get('/contact/{name}/{email}/{subject}/{message}' , [SendContactUsEmail::
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware(['auth' , 'admin.master' , 'verified'])->name('dashboard');
+})->middleware(['auth' , 'verified'])->name('dashboard');
 
 require __DIR__.'/auth.php';
