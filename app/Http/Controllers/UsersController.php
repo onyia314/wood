@@ -22,7 +22,7 @@ class UsersController extends Controller
             return back()->with('success' , 'user role updated');
         }
 
-        return back()->with('failure' , 'user role not updated');
+        return back()->with('failure' , 'nothing was updated');
     }
 
     public function destroy(User $user){

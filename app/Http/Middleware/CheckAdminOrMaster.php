@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class CheckAdminOrMaster
 {
@@ -16,10 +17,15 @@ class CheckAdminOrMaster
      */
     public function handle(Request $request, Closure $next)
     {
-        if( ($request->user()->role == 'master') || ($request->user()->role == 'admin') ){
-            return $next($request);
+
+        if(Auth::check()){
+            if( ($request->user()->role == 'master') || ($request->user()->role == 'admin') ){
+                return $next($request);
+            }
+
+            abort(401);
         }
 
-        abort(401);
+        return redirect()->route('login');
     }
 }
