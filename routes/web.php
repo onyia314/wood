@@ -24,6 +24,9 @@ Route::get('/', function () {
 Route::get('/about', function () {
     return view('about');
 })->name('about');
+Route::get('/contact', function () {
+    return view('contact');
+})->name('contact');
 
 Route::get('/gallery', function () {
     $projects = Project::paginate(2);
@@ -40,7 +43,7 @@ Route::resource('projects' , ProjectController::class);
 
 Route::group(['middleware' => ['json.response']] , function(){
 //no need for @csrf here so we make use of Get method
-Route::get('/contact/{name}/{email}/{subject}/{message}' , [SendContactUsEmail::class , 'send']);
+Route::get('/send-contact-form/{name}/{email}/{subject}/{message}' , [SendContactUsEmail::class , 'send']);
 });
 
 Route::get('/dashboard', function () {

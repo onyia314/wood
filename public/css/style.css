@@ -1,6 +1,6 @@
 body {
   font-family: "Quicksand", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  background-color: #f1eeea;
+  background-color: #EFE6DD;
   position: relative;
 }
 
@@ -56,6 +56,20 @@ a:hover {
   text-decoration: none !important;
 }
 
+.btn-wood{
+  background-color: #AC6F53;
+  color: white;
+}
+
+.icon-menu{
+  color: #AC6F53;
+}
+
+
+.section-title{
+  color: #a52a2a;
+  font-weight: 500;
+}
 
 .site-navbar-wrap {
   position: absolute;
@@ -83,17 +97,17 @@ a:hover {
 .site-navbar .site-logo {
   font-weight: 200;
   line-height: 0;
-  top: -7px;
+  /* top: -7px; */
   position: relative;
 }
 
-.site-navbar .site-logo a {
+/* .site-navbar .site-logo a {
   font-weight: 200;
   color: #fff;
   font-size: 20px;
   font-weight: bold;
   text-transform: uppercase;
-}
+} */
 
 .site-navbar .site-navigation .site-menu {
   margin-bottom: 0;
@@ -472,12 +486,8 @@ a:hover {
 }
 .footer-16371 .footer-site-logo {
   text-align: center;
-  font-size: 2rem;
-  font-weight: 900;
 }
-.footer-16371 .footer-site-logo a {
-  color: inherit;
-}
+
 .footer-16371 .nav-links {
   padding: 0;
   margin: 0;
@@ -522,14 +532,10 @@ a:hover {
   color: #8a6f6f;
 }
 
-.contactForm .label {
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 12px;
-  font-weight: 600; }
 
 .contactForm .form-control {
-  border: none; }
+  border: none;
+}
 
 .contactForm .btn {
   width: 100%;
@@ -573,5 +579,4 @@ a:hover {
   margin: 0 auto;
   margin-bottom: 20px;
 }
-
 

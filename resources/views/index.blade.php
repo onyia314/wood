@@ -12,9 +12,9 @@
     <div class="hero" style="background-image: url('/images/hero_2.jpg');">
 
         <div class = "hero-inner-cont">
-        <p style="font-weight: bold; color:white">MarinaWood</p>
-        <p>restoring our wood is our passion</p>
-        <a class="btn btn-success" href = " {{route('about')}}" role="button">Get in Touch</a>
+          <h3 style="font-weight: bold; color:white">Marina's Wood Restoration</h3>
+          <p class="mb-2" style="color:white">We pride ourselves in restoring your furniture</p>
+          <a class="btn btn-wood" href = " {{route('about')}}" role="button">Get in Touch</a>
         </div>
 
     </div>
@@ -29,7 +29,7 @@
         <div class="container text-center" data-aos="fade-up">
   
           <header class="section-header">
-            <h3>About Us</h3>
+            <h3 class="section-title">About Us</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
           </header>
   
@@ -41,7 +41,7 @@
                   <img src="/images/about-mission.jpg" alt="" class="img-fluid">
                   <div class="icon"><i class="bi bi-bar-chart"></i></div>
                 </div>
-                <h2 class="title"><a href="#">Our Mission</a></h2>
+                <h2 class="section-title">Our Mission</h2>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
@@ -54,7 +54,7 @@
                   <img src="/images/about-plan.jpg" alt="" class="img-fluid">
                   <div class="icon"><i class="bi bi-brightness-high"></i></div>
                 </div>
-                <h2 class="title"><a href="#">Our Plan</a></h2>
+                <h2 class="section-title">Our Plan</h2>
                 <p>
                   Sed ut perspiciatis unde omnis iste natus error sit voluptatem doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
                 </p>
@@ -67,7 +67,7 @@
                   <img src="/images/about-vision.jpg" alt="" class="img-fluid">
                   <div class="icon"><i class="bi bi-calendar4-week"></i></div>
                 </div>
-                <h2 class="title"><a href="#">Our Vision</a></h2>
+                <h2 class="section-title">Our Vision</h2>
                 <p>
                   Nemo enim ipsam voluptatem quia voluptas sit aut odit aut fugit, sed quia magni dolores eos qui ratione voluptatem sequi nesciunt Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
                 </p>
@@ -86,7 +86,7 @@
         <div class="container text-center" data-aos="fade-up">
   
           <header class="section-header wow fadeInUp">
-            <h3>Services</h3>
+            <h3 class="section-title">Services</h3>
             <p>Laudem latine persequeris id sed, ex fabulas delectus quo. No vel partiendo abhorreant vituperatoribus, ad pro quaestio laboramus. Ei ubique vivendum pro. At ius nisl accusam lorenta zanos paradigno tridexa panatarel.</p>
           </header>
   
@@ -131,13 +131,11 @@
     <section id="call-to-action">
 
         <div class="container text-center" data-aos="zoom-in">
-
-            <h4 class="title">About us</h4>
+            <h3 class="section-title">Call to Action</h3>
             <p>
-                give us a quick call so we could restore your furniture
+                Give us a quick call so we could restore your furniture
             </p>
-    
-            <a href="" class="btn cta-btn" role="button">contact us now</a>
+            <a href="#contact-section" class="btn cta-btn" role="button">contact us now</a>
         </div>
 
     </section>
@@ -148,7 +146,7 @@
         <div class="container ">
           <div class="row mb-5 ">
             <div class="col-12 text-center">
-              <h2 class="my-5">Carousel #6</h2>
+              <h3 class="my-5 section-title">Testimonial</h3>
             </div>
           </div>
         </div>
@@ -203,13 +201,13 @@
       </div>
 
 
-      <section class="ftco-section">
+      <section class="ftco-section" id="contact-section">
 
         <div class="container">
 
           <div class="row justify-content-center">
             <div class="col-md-6 text-center mb-5">
-              <h2 class="heading-section">Contact Form #09</h2>
+              <h3 class="heading-section section-title">Reach Out</h3>
             </div>
           </div>
 
@@ -235,7 +233,7 @@
                             <span class="fa fa-phone"></span>
                           </div>
                           <div class="text">
-                            <p><span>Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
+                            <p><span>Phone:</span> <a href="tel:+1 215-990-4058" style="color:inherit">+1 215-990-4058</a></p>
                           </div>
                         </div>
                       </div>
@@ -245,7 +243,7 @@
                             <span class="fa fa-paper-plane"></span>
                           </div>
                           <div class="text">
-                            <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+                            <p><span>Email:</span> <a href="mailto:marinaweinstein@yahoo.com" style="color: inherit;">marinaweinstein@yahoo.com</a></p>
                           </div>
                         </div>
                       </div>
@@ -253,7 +251,7 @@
                   </div>
                   <div class="col-lg-8">
                     <div class="contact-wrap">
-                      <h3 class="mb-4 text-center">Get in touch with us</h3>
+                      <h3 class="mb-4 text-center section-title">Get in touch with us</h3>
                       <div id="form-message-warning" class="mb-4 w-100 text-center"></div> 
                       <div id="form-message-success" class="mb-4 w-100 text-center">
                         Your message was sent, thank you!
@@ -282,7 +280,8 @@
                           </div>
                           <div class="col-md-12">
                             <div class="form-group">
-                              <input type="submit" value="Send Message" class="btn btn-primary">
+                              <input type="hidden" name = "form-url" id = "form-url" value="{{env('APP_URL')}}">
+                              <input type="submit" value="Send Message" class="btn btn-wood">
                               <div class="submitting"></div>
                             </div>
                           </div>

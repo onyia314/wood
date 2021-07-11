@@ -81,7 +81,7 @@
         <div class="container">
           <div class="row align-items-center">
             <div class="col-2">
-              <h1 class="my-0 site-logo"><a href="index.html">Brand</a></h1>
+              <h1 class="my-0 site-logo"><a href="{{route('index')}}"><img src="/images/logo.png" height="70" width="70" alt="" srcset=""></a></h1>
             </div>
             <div class="col-10">
               <nav class="site-navigation text-right" role="navigation">
@@ -108,9 +108,11 @@
                     </li>
                     <li><a href="{{route('about')}}" class="nav-link">About</a></li>
                     <li><a href="{{route('about')}}" class="nav-link">Services</a></li>
-                    <li><a href="{{route('about')}}" class="nav-link">Blog</a></li>
                     <li><a href="{{route('gallery')}}" class="nav-link">Gallery</a></li>
-                    <li><a href="#contact-section" class="nav-link">Contact</a></li>
+                    <li><a href="{{route('contact')}}" class="nav-link">Contact</a></li>
+                    @if (Auth::check())
+                    <li><a href="{{route('dashboard')}}" class="nav-link">Dashboard</a></li>
+                    @endif
                   </ul>
                 </div>
               </nav>
@@ -129,16 +131,13 @@
         <div class="row justify-content-center">
           <div class="col-md-9 text-center">
             <div class="footer-site-logo mb-4">
-              <a href="#">Colorlib</a>
+              <h4 class="section-title">Marina's Wood Restoration</h4>
             </div>
             <ul class="list-unstyled nav-links mb-5">
-              <li><a href="#">About</a></li>
+              <li><a href="{{route('about')}}">About</a></li>
               <li><a href="#">Services</a></li>
-              <li><a href="#">Press</a></li>
-              <li><a href="#">Careers</a></li>
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">Legal</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><a href="{{route('gallery')}}">Gallery</a></li>
+              <li><a href="{{route('contact')}}">Contact</a></li>
             </ul>
 
             <div class="social mb-4">
@@ -153,7 +152,7 @@
             </div>
 
             <div class="copyright">
-              <p class="mb-0"><small>&copy; Colorlib. All Rights Reserved.</small></p>
+              <p class="mb-0"><small>&copy; Marina's Wood. All Rights Reserved, 2021.</small></p>
             </div>
 
 

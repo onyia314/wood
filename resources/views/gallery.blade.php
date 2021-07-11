@@ -2,6 +2,7 @@
 @section('title' , 'gallery')
 
 @push('css')
+    <link rel = "stylesheet" href = "/css/curtain.css"/>
     <link rel = "stylesheet" href = "/css/gallery/gallery.css"/>
     <link href="/css/gallery/twentytwenty.css" rel="stylesheet" type="text/css" />
 @endpush
