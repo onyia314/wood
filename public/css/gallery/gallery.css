@@ -30,4 +30,11 @@
   }
 }
 
-
+.page-link{
+  color: #826C5F;
+}
+ .page-item.active .page-link {
+  color: #fff;
+  background-color: #AC6F53;
+  border-color: #AC6F53;
+}

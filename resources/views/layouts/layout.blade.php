@@ -89,9 +89,9 @@
                   <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
 
                   <ul class="site-menu main-menu js-clone-nav d-none d-lg-block">
-                    <li class="active"><a href="{{route('index')}}" class="nav-link">Home</a></li>
+                    <li class = " @php if(basename(request()->path()) == '') echo ' active' @endphp "><a href="{{route('index')}}" class="nav-link">Home</a></li>
                     <li class="has-children">
-                      <a href="#" class="nav-link">Pages</a>
+                      <a href="#" class="nav-link @php if(basename(request()->path()) == 'services') echo ' active' @endphp">services</a>
                       <ul class="dropdown arrow-top">
                         <li><a href="#" class="nav-link">Team</a></li>
                         <li><a href="#" class="nav-link">Pricing</a></li>
@@ -106,10 +106,9 @@
                         </li>
                       </ul>
                     </li>
-                    <li><a href="{{route('about')}}" class="nav-link">About</a></li>
-                    <li><a href="{{route('about')}}" class="nav-link">Services</a></li>
-                    <li><a href="{{route('gallery')}}" class="nav-link">Gallery</a></li>
-                    <li><a href="{{route('contact')}}" class="nav-link">Contact</a></li>
+                    <li><a href="{{route('about')}}" class="nav-link @php if(basename(request()->path()) == 'about') echo 'active' @endphp">About</a></li>
+                    <li><a href="{{route('gallery')}}" class="nav-link @php if(basename(request()->path()) == 'gallery') echo ' active' @endphp">Gallery</a></li>
+                    <li><a href="{{route('contact')}}" class="nav-link @php if(basename(request()->path()) == 'contact') echo ' active' @endphp">Contact</a></li>
                     @if (Auth::check())
                     <li><a href="{{route('dashboard')}}" class="nav-link">Dashboard</a></li>
                     @endif
@@ -135,7 +134,6 @@
             </div>
             <ul class="list-unstyled nav-links mb-5">
               <li><a href="{{route('about')}}">About</a></li>
-              <li><a href="#">Services</a></li>
               <li><a href="{{route('gallery')}}">Gallery</a></li>
               <li><a href="{{route('contact')}}">Contact</a></li>
             </ul>

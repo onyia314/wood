@@ -33,7 +33,8 @@
 </div>
 </div> --}}
 
-<div class="gallery-container">
+<div class="gallery-container mt-5">
+
   <div class="row">
 
     @foreach ($projects as $project)
@@ -49,7 +50,7 @@
           <div class="card-body">
             <h5 class="card-title">{{$project->title}}</h5>
             <p class="card-text">{{Str::words($project->about , 40  , '......' )}}</p>
-            <a href="#" class="btn btn-primary">Read more</a>
+            <a href="#" class="btn btn-wood">Read more</a>
           </div>
         </div>
       </div>    
