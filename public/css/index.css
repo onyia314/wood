@@ -26,6 +26,10 @@
   p{
     color: #826C5F;
   }
+
+  button.active span{
+    background-color: #AC6F53 !important;
+  }
 /* About Us Section
 --------------------------------*/
 #about {

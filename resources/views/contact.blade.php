@@ -31,7 +31,7 @@
                         <span class="fa fa-map-marker"></span>
                       </div>
                       <div class="text">
-                        <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
+                        <p style="font-weight:900;"><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
                       </div>
                     </div>
                   </div>
@@ -41,7 +41,7 @@
                         <span class="fa fa-phone"></span>
                       </div>
                       <div class="text">
-                        <p><span>Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
+                        <p><span>Phone:</span> <a href="tel://1234567920" style="color: inherit; font-weight:900;">+ 1235 2355 98</a></p>
                       </div>
                     </div>
                   </div>
@@ -51,7 +51,7 @@
                         <span class="fa fa-paper-plane"></span>
                       </div>
                       <div class="text">
-                        <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+                        <p><span>Email:</span> <a href="mailto:info@yoursite.com" style="color: inherit; font-weight:900;">info@yoursite.com</a></p>
                       </div>
                     </div>
                   </div>
@@ -89,7 +89,7 @@
                       <div class="col-md-12">
                         <div class="form-group">
                           <input type="hidden" name = "form-url" id = "form-url" value="{{env('APP_URL')}}">
-                          <input type="submit" value="Send Message" class="btn btn-primary">
+                          <input type="submit" value="Send Message" class="btn btn-wood">
                           <div class="submitting"></div>
                         </div>
                       </div>

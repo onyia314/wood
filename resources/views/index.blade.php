@@ -13,8 +13,8 @@
 
         <div class = "hero-inner-cont">
           <h3 style="font-weight: bold; color:white">Marina's Wood Restoration</h3>
-          <p class="mb-2" style="color:white">We pride ourselves in restoring your furniture</p>
-          <a class="btn btn-wood" href = " {{route('about')}}" role="button">Get in Touch</a>
+          <p class="mb-2" style="color:white">We pride ourselves in restoring old vintage pieces of furniture</p>
+          <a class="btn btn-wood" href = " {{route('contact')}}" role="button">Get in Touch</a>
         </div>
 
     </div>
@@ -223,7 +223,7 @@
                             <span class="fa fa-map-marker"></span>
                           </div>
                           <div class="text">
-                            <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
+                            <p style="font-weight:900;"><span style="font-weight:600;">Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
                           </div>
                         </div>
                       </div>
@@ -233,7 +233,7 @@
                             <span class="fa fa-phone"></span>
                           </div>
                           <div class="text">
-                            <p><span>Phone:</span> <a href="tel:+1 215-990-4058" style="color:inherit">+1 215-990-4058</a></p>
+                            <p><span>Phone:</span> <a href="tel:+1 215-990-4058" style="color:inherit; font-weight:900;">+1 215-990-4058</a></p>
                           </div>
                         </div>
                       </div>
@@ -243,7 +243,7 @@
                             <span class="fa fa-paper-plane"></span>
                           </div>
                           <div class="text">
-                            <p><span>Email:</span> <a href="mailto:marinaweinstein@yahoo.com" style="color: inherit;">marinaweinstein@yahoo.com</a></p>
+                            <p><span>Email:</span> <a href="mailto:marinaweinstein@yahoo.com" style="color: inherit; font-weight:900;">marinaweinstein@yahoo.com</a></p>
                           </div>
                         </div>
                       </div>

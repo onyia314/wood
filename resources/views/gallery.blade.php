@@ -50,29 +50,12 @@
           <div class="card-body">
             <h5 class="card-title" style="color:#A52A2A; text-align:center; text-transform:uppercase">{{$project->title}}</h5>
             <p class="card-text" style="color: #826C5F">{{Str::words($project->about , 40  , '......' )}}</p>
-            <a href="#" class="btn btn-wood" style="width: 100%;">Read more</a>
+            <a href="{{route('projects.show' , ['project' => $project->id])}}" class="btn btn-wood" style="width: 100%;">Read more</a>
           </div>
         </div>
       </div>    
 
     @endforeach
-    
-
-    {{-- <div class="col-lg-6">
-      <div class="card">
-
-        <div class="twentytwenty-container">
-          <img src="/images/before_1.jpg" alt="before" style="width:100% !important height:auto !important "/>
-          <img src="/images/after_1.jpg"  alt="after" style="width:100% !important height:auto !important "/>
-        </div>
-
-        <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-    </div> --}}
 
   </div>
 
@@ -87,8 +70,8 @@
     <script src="/js/gallery/jquery.twentytwenty.js" type="text/javascript"></script>
     <script>
         $(function(){
-          $(".twentytwenty-container[data-orientation!='vertical']").twentytwenty({default_offset_pct: 0.7});
-          $(".twentytwenty-container[data-orientation='vertical']").twentytwenty({default_offset_pct: 0.3, orientation: 'vertical'});
+          $(".twentytwenty-container[data-orientation!='vertical']").twentytwenty({default_offset_pct: 0.5});
+         /*  $(".twentytwenty-container[data-orientation='vertical']").twentytwenty({default_offset_pct: 0.3, orientation: 'vertical'}); */
         });
     </script>
 @endpush
