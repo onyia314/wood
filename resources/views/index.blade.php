@@ -4,6 +4,8 @@
 
 @push('css')
     <link href = "/css/index.css" rel = "stylesheet"/>
+    <link href = "/css/gallery/gallery.css" rel = "stylesheet"/>
+    <link href="/css/gallery/twentytwenty.css" rel="stylesheet" type="text/css" />
     <link href="/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
 @endpush
 
@@ -200,13 +202,56 @@
     
       </div>
 
+      <section>
+
+        <div class="container ">
+          <div class="row mb-4 ">
+            <div class="col-12 text-center">
+              <h3 class="my-5 section-title">Gallery</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-container mt-4">
+
+          <div class="row">
+        
+            @foreach ($projects as $project)
+        
+              <div class="col-lg-6">
+                <div class="card">
+        
+                  <div class="twentytwenty-container">
+                    <img src="{{asset('uploads') . '/' .$project->before_path}}" alt="before" style="width:100% !important height:auto !important "/>
+                    <img src="{{asset('uploads') . '/' .$project->after_path}}" alt="after"  style="width:100% !important height:auto !important "/>
+                  </div>
+        
+                  <div class="card-body">
+                    <h5 class="card-title" style="color:#A52A2A; text-align:center; text-transform:uppercase">{{$project->title}}</h5>
+                    <p class="card-text" style="color: #826C5F">{{Str::words($project->about , 40  , '......' )}}</p>
+                    <a href="{{route('projects.show' , ['project' => $project->id])}}" class="btn btn-wood" style="width: 100%;">Read more</a>
+                  </div>
+                </div>
+              </div>    
+        
+            @endforeach
+        
+          </div>
+
+          <div>
+            <a href = "{{route('gallery')}}" class="btn mt-3" style="width: 100%; border: 1px solid #826C5F;">View more</a>
+          </div>
+        </div>
+
+      </section>
+
 
       <section class="ftco-section" id="contact-section">
 
         <div class="container">
 
           <div class="row justify-content-center">
-            <div class="col-md-6 text-center mb-5">
+            <div class="col-md-6 text-center mb-5 mt-5">
               <h3 class="heading-section section-title">Reach Out</h3>
             </div>
           </div>
@@ -296,6 +341,16 @@
         </div>
       </section>
 
-    
 @endsection
+
+@push('ui-script')
+    <script src="/js/gallery/jquery.event.move.js" type="text/javascript"></script>
+    <script src="/js/gallery/jquery.twentytwenty.js" type="text/javascript"></script>
+    <script>
+        $(function(){
+          $(".twentytwenty-container[data-orientation!='vertical']").twentytwenty({default_offset_pct: 0.5});
+         /*  $(".twentytwenty-container[data-orientation='vertical']").twentytwenty({default_offset_pct: 0.3, orientation: 'vertical'}); */
+        });
+    </script>
+@endpush
  

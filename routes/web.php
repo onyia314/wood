@@ -18,7 +18,8 @@ use App\Http\Controllers\SendContactUsEmail;
 */
 
 Route::get('/', function () {
-    return view('index');
+    $projects = Project::paginate(2);
+    return view('index' , ['projects' => $projects]);
 })->name('index');
 
 Route::get('/about', function () {
