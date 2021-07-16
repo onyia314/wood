@@ -59,29 +59,15 @@
           <div class="row">
         
             @foreach ($projects as $project)
-        
-              <div class="col-lg-6">
-                <div class="card">
-        
-                  <div class="twentytwenty-container">
-                    <img src="{{'/uploads' . '/' .$project->before_path}}" alt="before" style="width:100% !important height:auto !important "/>
-                    <img src="{{'/uploads'. '/' .$project->after_path}}" alt="after"  style="width:100% !important height:auto !important "/>
-                  </div>
-        
-                  <div class="card-body">
-                    <h5 class="card-title" style="color:#A52A2A; text-align:center; text-transform:uppercase">{{$project->title}}</h5>
-                    <p class="card-text" style="color: #826C5F">{{Str::words($project->about , 40  , '......' )}}</p>
-                    <a href="{{route('projects.show' , ['project' => $project->id])}}" class="btn btn-wood" style="box-shadow:none; width: 100%;">Read more</a>
-                  </div>
-                </div>
-              </div>    
-        
+           
+            @include('includes.gallery')
+
             @endforeach
         
           </div>
 
-          <div>
-            <a href = "{{route('gallery')}}" class="btn mt-3" style="width: 100%; border: 1px solid #826C5F;">View more</a>
+          <div style="text-align: center">
+            <a href = "{{route('gallery')}}" class="btn mt-5 pt-3 pb-3" style="width: 160px; background-color:#AC6F53; color:white; border-shadow:none">View more</a>
           </div>
         </div>
 

@@ -6,6 +6,12 @@
   margin-left: auto;
 }
 
+#btn-readmore-gallery{
+  border: 2px solid #AC6F53;
+  box-shadow:none;
+  width: 100%;
+}
+
 @media (min-width: 576px) {
   .gallery-container {
     max-width: 540px;

@@ -48,7 +48,7 @@
               </div>
               <div class="col-lg-8">
                 <div class="contact-wrap">
-                  <h3 class="mb-4 text-center section-title">Get in touch with us</h3>
+                  <h3 class="mb-4 text-center section-title">Get in Touch With Us</h3>
                   <div id="form-message-warning" class="mb-4 w-100 text-center"></div> 
                   <div id="form-message-success" class="mb-4 w-100 text-center">
                     Your message was sent, we'll get back to you shortly, thank you!
