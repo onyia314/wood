@@ -1,10 +1,10 @@
 @extends('layouts.layout')
 
-@section('title' , "About Us - Marina's Wood Restoration Shop")
+@section('title' , "Services - Marina's Wood Restoration Shop")
 
 @push('css')
     <link href="/css/curtain.css" rel="stylesheet"/>
-    <link href="/css/about.css" rel="stylesheet"/>
+    <link href="/css/services.css" rel="stylesheet"/>
     <link href="/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
 @endpush
 
@@ -12,12 +12,12 @@
 
     <div class = "hero" style="background-image: url('/images/hero_2.jpg')">
         <div class="hero-inner-cont">
-            <h3 style="font-weight: bold; color:white">About Us</h3>
+            <h3 style="font-weight: bold; color:white">Services</h3>
         </div>
     </div>
     
 @endsection
 
 @section('content')
-    @include('includes.about')
+    @include('includes.services')
 @endsection

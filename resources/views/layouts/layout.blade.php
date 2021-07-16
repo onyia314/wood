@@ -4,6 +4,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>@yield('title')</title>
     
     <link href="https://fonts.googleapis.com/css?family=Quicksand:400,600,700&display=swap" rel="stylesheet">
 
@@ -32,7 +34,6 @@
 
     @stack('css')
 
-    <title>@yield('title')</title>
   </head>
   <body>
 
@@ -90,7 +91,8 @@
 
                   <ul class="site-menu main-menu js-clone-nav d-none d-lg-block">
                     <li class = " @php if(basename(request()->path()) == '') echo ' active' @endphp "><a href="{{route('index')}}" class="nav-link">Home</a></li>
-                    <li class="has-children">
+                    
+                    {{-- <li class="has-children">
                       <a href="#" class="nav-link @php if(basename(request()->path()) == 'services') echo ' active' @endphp">services</a>
                       <ul class="dropdown arrow-top">
                         <li><a href="#" class="nav-link">Team</a></li>
@@ -105,7 +107,9 @@
                           </ul>
                         </li>
                       </ul>
-                    </li>
+                    </li> --}}
+
+                    <li><a href="{{route('services')}}" class="nav-link @php if(basename(request()->path()) == 'services') echo 'active' @endphp">Services</a></li>
                     <li><a href="{{route('about')}}" class="nav-link @php if(basename(request()->path()) == 'about') echo 'active' @endphp">About</a></li>
                     <li><a href="{{route('gallery')}}" class="nav-link @php if(basename(request()->path()) == 'gallery') echo ' active' @endphp">Gallery</a></li>
                     <li><a href="{{route('contact')}}" class="nav-link @php if(basename(request()->path()) == 'contact') echo ' active' @endphp">Contact</a></li>
@@ -130,10 +134,12 @@
         <div class="row justify-content-center">
           <div class="col-md-9 text-center">
             <div class="footer-site-logo mb-4">
-              <h4 class="section-title">Marina's Wood Restoration</h4>
+              <h4 class="section-title">Marina's Wood Restoration Shop</h4>
             </div>
             <ul class="list-unstyled nav-links mb-5">
+              <li><a href="{{route('index')}}">Home</a></li>
               <li><a href="{{route('about')}}">About</a></li>
+              <li><a href="{{route('services')}}">Services</a></li>
               <li><a href="{{route('gallery')}}">Gallery</a></li>
               <li><a href="{{route('contact')}}">Contact</a></li>
             </ul>
@@ -150,7 +156,7 @@
             </div>
 
             <div class="copyright">
-              <p class="mb-0"><small>&copy; Marina's Wood. All Rights Reserved, 2021.</small></p>
+              <p class="mb-0"><small> Copyright &copy; 2021, Marina's Wood Restoration Shop. All rights reserved.</small></p>
             </div>
 
 

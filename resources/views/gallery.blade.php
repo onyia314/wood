@@ -1,5 +1,6 @@
 @extends('layouts.layout')
-@section('title' , 'gallery')
+
+@section('title' , "Gallery - Marina's Wood Restoration Shop")
 
 @push('css')
     <link rel = "stylesheet" href = "/css/curtain.css"/>
