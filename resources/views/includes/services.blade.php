@@ -20,7 +20,7 @@
         <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
           <div class="services-col">
             <div class="img">
-              <img src="/images/about-mission.jpg" alt="" class="img-fluid">
+              <img src="/images/repair.jpg" alt="" class="img-fluid">
               <div class="icon"><i class="bi bi-tools"></i></div>
             </div>
             <h2 class="section-title">Furniture Repair</h2>
@@ -34,7 +34,7 @@
         <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
           <div class="services-col">
             <div class="img">
-              <img src="/images/about-plan.jpg" alt="" class="img-fluid">
+              <img src="/images/refinish.jpg" alt="" class="img-fluid">
               <div class="icon"><i class="bi bi-brush-fill"></i></div>
             </div>
             <h2 class="section-title">Furniture Refinishing</h2>
@@ -48,7 +48,7 @@
         <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
           <div class="services-col">
             <div class="img">
-              <img src="/images/about-vision.jpg" alt="" class="img-fluid">
+              <img src="/images/restoration.jpg" alt="" class="img-fluid">
               <div class="icon"><i class="bi bi-droplet"></i></div>
             </div>
             <h2 class="section-title">Furniture Restoration</h2>
