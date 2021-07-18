@@ -7,7 +7,7 @@
       </div>
 
       <div class="card-body">
-        <h5 class="card-title" style="color:#A52A2A; text-align:center; text-transform:uppercase">{{$project->title}}</h5>
+        <h6 class="card-title" style="color:#A52A2A; text-align:center; text-transform:uppercase">{{$project->title}}</h6>
         <p class="card-text" style="color: #826C5F">{{Str::words($project->about , 40  , '......' )}}</p>
         <a id="btn-readmore-gallery" href="{{route('projects.show' , ['project' => $project->id])}}" class="btn">Read more</a>
       </div>
