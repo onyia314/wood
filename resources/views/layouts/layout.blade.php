@@ -4,6 +4,10 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Marina's wood restoration shop">
+    <meta name="description" content="Repairing, Refinishing, and Restoring Ancient Furniture">
+    <meta name="keywords" content="Repairing, Refinishing, Furniture Restoration 
+    , wood restoration , marina weinstein , Marina's Wood Restoration Shop , Marina Wood Restoration Shop , Wood Restoration Shop ">
 
     <title>@yield('title')</title>
     
@@ -20,6 +24,8 @@
     <link rel="stylesheet" href="/fonts/icomoon/style.css">
 
     <link rel="stylesheet" href="/css/owl.carousel.min.css">
+
+    <link rel="icon" href="/images/logo.png">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
