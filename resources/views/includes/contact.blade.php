@@ -79,7 +79,7 @@
                         <div class="form-group">
                           <input type="hidden" name = "form-url" id = "form-url" value="{{env('APP_URL')}}">
                           <input type="submit" value="Send Message" class="btn btn-wood">
-                          <div class="submitting"></div>
+                          <div class="submitting text-center alert alert-success mt-3" ></div>
                         </div>
                       </div>
                     </div>

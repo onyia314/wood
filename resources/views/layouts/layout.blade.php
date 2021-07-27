@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Marina's wood restoration shop">
     <meta name="description" content="Repairing, Refinishing, and Restoring Ancient Furniture">
-    <meta name="keywords" content="Repairing, Refinishing, Furniture Restoration 
-    , wood restoration , marina weinstein , Marina's Wood Restoration Shop , Marina Wood Restoration Shop , Wood Restoration Shop ">
+    <meta name="keywords" content="repairing, refinishing, furniture restoration 
+    , wood restoration , marina weinstein , marina's wood restoration shop 
+    , marina wood restoration shop , wood restoration shop,
+    wood restoration">
 
     <title>@yield('title')</title>
     

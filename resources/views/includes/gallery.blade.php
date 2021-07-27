@@ -2,8 +2,8 @@
     <div class="card">
 
       <div class="twentytwenty-container">
-        <img src="{{'/uploads' . '/' .$project->before_path}}" alt="before" style="width:100% !important height:auto !important "/>
-        <img src="{{'/uploads'. '/' .$project->after_path}}" alt="after"  style="width:100% !important height:auto !important "/>
+        <img src="{{'/uploads' . '/' .$project->before_path}}" alt="before" style="width:100%; height:auto;"/>
+        <img src="{{'/uploads'. '/' .$project->after_path}}" alt="after"  style="width:100%; height:auto;"/>
       </div>
 
       <div class="card-body">

@@ -67,7 +67,7 @@
           </div>
 
           <div style="text-align: center">
-            <a href = "{{route('gallery')}}" class="btn mt-5 pt-3 pb-3" style="width: 160px; background-color:#AC6F53; color:white; border-shadow:none">View more</a>
+            <a href = "{{route('gallery')}}" class="btn mt-5 pt-3 pb-3" style="width: 160px; background-color:#AC6F53; color:white; box-shadow:none">View more</a>
           </div>
         </div>
 
