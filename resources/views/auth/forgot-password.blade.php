@@ -1,8 +1,22 @@
-@extends('layouts.dashboard')
+@extends('layouts.layout')
+
+@push('css')
+    <link href="/css/curtain.css" rel="stylesheet"/>
+@endpush
+
+@section('curtain')
+
+    <div class = "hero" style="background-image: url('/images/hero_2.jpg')">
+        <div class="hero-inner-cont">
+            <h3 style="font-weight: bold; color:white">forgot password</h3>
+        </div>
+    </div>
+    
+@endsection
   
 @section('content')
 
-<main class="login-form">
+<main class="login-form mt-1">
   <div class="cotainer">
       <div class="row justify-content-center">
           <div class="col-md-8">
